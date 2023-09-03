@@ -534,7 +534,7 @@ import datetime
 # print(f"O total em Real é: R${total_em_real:.2f}")
 
 
-#resolução
+# resolução
 # def calcular_valor(valor_prod, qtde, moeda="real", desconto=None, acrescimo=None):
 #     v_bruto = valor_prod * qtde
 #
@@ -591,7 +591,7 @@ import datetime
 # print(f"O valor final da conta é {valor_a_pagar}")
 
 
-#ESTRUTURAS DE DADOS EM PYTHON
+# ESTRUTURAS DE DADOS EM PYTHON
 # vamos dividir as estruturas de dados em objetos do
 # tipo sequência, do tipo set, do tipo mapping e do tipo array NumPy. Cada grupo
 # pode possuir mais de um objeto. Vamos estudar esses objetos na seguinte ordem:
@@ -600,7 +600,7 @@ import datetime
 # 3. Objetos do tipo mapping (dicionário).
 # 4. Objetos do tipo array NumPy.
 
-#OBJETOS DO TIPO SEQUÊNCIA
+# OBJETOS DO TIPO SEQUÊNCIA
 # operaçoes que podem realizar
 # Operação Resultado Observação
 # x in s True caso um item de s seja
@@ -668,7 +668,7 @@ import datetime
 # print(f"Quantidade de vezes que string ou strings aparecem = {texto.count('string')}")
 
 
-#LISTAS
+# LISTAS
 # Em Python, as listas podem ser construídas de várias
 # maneiras:
 # Usando um par de colchetes para denotar uma lista vazia: lista1 = []
@@ -726,5 +726,74 @@ import datetime
 # print("lista[-2] = ", lista[-2])
 # print("lista[-1] = ", lista[-1])
 # print("lista[4][1] = ", lista[4][1])
+
+
+# texto = 'python'
+
+# print(texto.strip()) #remove espaços
+# print(texto.lstrip()) # remove espaço da esquerda
+# print(texto.rstrip()) #remove espaço da direita
+#
+# print(texto.center(10, '*'))
+# print('.'.join(texto))
+#
+# for letras in texto:
+#     if letras == texto[-1]:
+#         print(letras)
+#     else:
+#         print(letras + '-', end='')
+# else:
+#     print("Obrigado!")
+
+
+# nome = "josimar gonçalves da silva"
+#
+# print(nome)
+# nome1 = nome.title()
+# nome1 = nome1.split()
+# print(nome1)
+#
+# print()
+# nome2 = nome[:7]
+# print(nome2)
+# sobrenome3 = nome[:-6:-1]
+# sobrenome3 = sobrenome3[::-1]
+# print(sobrenome3)
+# sobrenome2 = nome[:-9:-7]
+# sobrenome2 = sobrenome2[::-1]
+# print(sobrenome2)
+# sobrenome = nome[8:17]
+# print(sobrenome)
+#
+# print(nome2 + " " + sobrenome + " " + sobrenome2 + " " + sobrenome3)
+
+# N = int(input())
+#
+# while N > 0:
+#     A, B = input().split()
+#
+#     # Verificar se B corresponde aos últimos dígitos de A
+#     encaixa = True
+#
+#     # Comece comparando os dígitos de A e B a partir do final
+#     i = len(A) - 1
+#     j = len(B) - 1
+#
+#     while i >= 0 and j >= 0:
+#         if A[i] != B[j]:
+#             encaixa = False
+#             break
+#         i -= 1
+#         j -= 1
+#
+#     if j >= 0:
+#         encaixa = False
+#
+#     if encaixa:
+#         print("encaixa")
+#     else:
+#         print("nao encaixa")
+#
+#     N -= 1
 
 
