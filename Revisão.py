@@ -796,4 +796,21 @@ import datetime
 #
 #     N -= 1
 
+# #Verifica se a palavra digitada é ou não um palíndromo!
+# while True:
+#     print("Vou ver se a palavra digitada é ou não um PALÍNDROMO!\033[31m[sair]\033[m")
+#     palindromo = str(input("Informe a palavra:"))
+#     if palindromo.lower() == 'sair':
+#         print("Saindo.....")
+#         break
+#     if palindromo == palindromo[::-1]:
+#         print("Sua palavra é um \033[32mPALÍNDROMO!\033[m\n")
+#     else:
+#         print("Sua palavra \033[31mnão\033[m é um \033[31mPALÍNDROMO!\033[m\n")
+
+
+# linguagem = ['pyhon', 'js', 'c', 'java', 'csharp']
+# linguagem.sort(key=lambda x: len(x))
+# print(linguagem)
+# print(sorted(linguagem, key=lambda x: len(x), reverse=True))
 

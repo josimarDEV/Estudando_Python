@@ -1,4 +1,5 @@
 import time
+
 menu = int(input("""
 ======BANCO SILVA======
      [1]-DEPÓSITO
@@ -75,7 +76,6 @@ while True:
         break
     else:
         print("Opção inválida. Por favor, selecione uma opção válida.")
-
 
     time.sleep(2)
     print("""
