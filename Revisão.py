@@ -814,3 +814,173 @@ import datetime
 # print(linguagem)
 # print(sorted(linguagem, key=lambda x: len(x), reverse=True))
 
+# #LIST COMPREHENSION (COMPREENSÕES DE LISTA)
+# linguagem = ['Python', 'Java', 'JavaScript', 'C', 'C#', 'C++', 'Swift', 'Go', 'Kotlin']
+#
+# print("Antes da listcomp = ", linguagem)
+#
+# linguagem = [item.lower() for item in linguagem]
+#
+# print("\nDepois da listcomp = ", linguagem)
+
+#sem a list comprehension
+
+# linguagens = '''Python Java JavaScript C C# C++ Swift Go Kotlin'''.split()
+# print(f"Antes da listcomp = {linguagens}")
+#
+# for i, item in enumerate(linguagens):
+#     linguagens[i] = item.lower()
+#
+# print(f"\nDepois da listcomp = {linguagens}")
+
+# #outro expemlo
+# linguagens = '''Python Java JavaScript C C# C++ Swift Go Kotlin'''.split()
+#
+# linguagem_java = [item for item in linguagens if "Java" in item]
+# print(linguagem_java)
+
+
+# linguagens = '''Python Java JavaScript C C# C++ Swift Go Kotlin'''.split()
+# linguagens_java = []
+# for item in linguagens:
+#     if "Java" in item: #PODEMOS USAR O == POREM RETORANARA SÓ O NOME IGUAL
+#         linguagens_java.append(item)
+# print(linguagens_java)
+
+
+# #FUNÇÕES MAP() E FILTER()
+# #exemplo 1
+# linguagens = '''Python Java JavaScript C C# C++ Swift Go Kotlin'''.split()
+#
+# nova_lista = map(lambda x: x.lower(), linguagens)
+# print(f"A nova lista é = {nova_lista}")
+#
+# nova_lista = list(nova_lista)
+# print(f"Agora sim, a nova lista é = {nova_lista}")
+#
+#
+# #exemplo 2
+# numeros = [0, 1, 2, 3, 4, 5]
+#
+# quadrados = list(map(lambda x: x*x, numeros))
+# print(f"Lista com o núro elevado a ele mesmo = {quadrados}")
+
+
+# #filter
+# numeros = list(range(0, 21))
+#
+# numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
+#
+# print(numeros_pares)
+
+
+#TUPLAS
+# As tuplas também são estruturas de dados do grupo de objetos do tipo sequência.
+# A grande diferença entre listas e tuplas é que as primeiras são mutáveis, razão pela
+# qual, com elas, conseguimos fazer atribuições a posições específicas: por exemplo,
+# lista[2] = 'maça'. Por sua vez, nas tuplas isso não é possível, uma vez que são
+# objetos imutáveis.
+# Em Python, as tuplas podem ser construídas de três maneiras:
+# Usando um par de parênteses para denotar uma tupla vazia: tupla1 = ()
+# Usando um par de parênteses e elementos separados por vírgulas: tupla2 = ('a',
+# 'b', 'c')
+# Usando o construtor de tipo: tuple()
+
+
+# vogais = ('a', 'e', 'i', 'o', 'u')
+# print(f"Tipo do objeto vogais {type(vogais)}")
+# for x, item in enumerate(vogais):
+#     print(f"Posição[{x}], Valor[{item}]")
+
+# vogais = ()
+# vogais.append('a') #dara erro pois um tupla é imutavel
+
+
+# vogais = ('a', 'e', 'i', 'o', 'u')
+# # for item in enumerate(vogais):
+# #  print(item)
+#
+# # print(tuple(enumerate(vogais)))
+# # print(list(enumerate(vogais)))
+# vogais = list(vogais)
+# print(vogais)
+# vogais.append('ão')
+# print(vogais)
+# vogais = tuple(vogais)
+# print(vogais)
+
+
+#OBJETOS DO TIPO SET
+# A tradução"conjunto" para set nos leva diretamente à essência desse tipo de
+# estrutura de dados em Python. Um objeto do tipo set habilita operações
+# matemáticas de conjuntos, tais como: união, intersecção, diferenteça, etc. Esse tipo
+# de estrutura pode ser usado, portanto, em testes de associação e remoção de
+# valores duplicados de uma sequência (PSF, 2020c).
+# Das operações que já conhecemos sobre sequências, conseguimos usar nessa
+# nova estrutura:
+# len(s)
+# x in s
+# x not in s
+# Além dessas operações, podemos adicionar um novo elemento a um conjunto com
+# a função add(valor). Também podemos remover com remove(valor). Veja uma lista
+# completa de funções no endereço https://bit.ly/2NF7eIT.
+# Em Python, os objetos do tipo set podem ser construídos destas maneiras:
+# Usando um par de chaves e elementos separados por vírgulas: set1 = {'a', 'b',
+# 'c'}
+# Usando o construtor de tipo: set(iterable)
+
+# Não é possível criar um set vazio, com set = {}, pois essa é a forma de construção
+# de um dicionário. Para construir com utilização da função set(iterable),
+# obrigatoriamente temos de passar um objeto iterável para ser transformado em
+# conjunto. Esse objeto pode ser uma lista, uma tupla ou até mesmo uma string (que
+# é um tipo de sequência). Veja os exemplos de construção a seguir.
+
+
+# vogais_1 = {'aeiou'} #sem uso do construtor
+# print(type(vogais_1), vogais_1)
+#
+# vogais_2 = set('aeiouaaaaa') #constutor com string
+# print(type(vogais_2), vogais_2)
+#
+# vogais_3 = set(['a', 'e', 'i', 'o', 'u']) #construtor com tupla
+# print(type(vogais_3), vogais_3)
+#
+# vogais_4 = set(('a', 'e', 'i', 'o', 'u'))
+# print(type(vogais_4), vogais_4)
+#
+# print(set('banana'))
+
+
+# def create_report():
+#     componentes_verificados = {'caixas de som', 'cooler', 'dissipador de calor', 'cpu', 'hd', 'estabilizador',
+#                                'gabinete', 'hub', 'impressora', 'joystick', 'memória ram', 'microfone', 'modem',
+#                                'monitor', 'mouse', 'no-break', 'placa de captura', 'placa de som', 'placa de vídeo',
+#                                'placa mãe', 'scanner', 'teclado', 'webcam'}
+#     componentes_com_defeito = {'hd', 'monitor', 'placa de som', 'scanner'}
+#     qtde_componentes_verificado = len(componentes_verificados)
+#     qtde_componetes_com_defeito = len(componentes_com_defeito)
+#
+#     componetes_ok = componentes_verificados - componentes_com_defeito
+#
+#     print(f"Foram verificado {qtde_componentes_verificado} componentes.\n")
+#     print(f"{qtde_componetes_com_defeito} componetes apresentaram defeito.\n")
+#
+#     print("Os componentes que podem ser vendidos são:")
+#     for item in componetes_ok:
+#         print(item)
+
+# # create_report()
+#
+# a = {1, 2, 5}
+# b = {3, 4, 1}
+# c = {5, 6, 2}
+#
+# ab = a.union(b, c)
+# print(ab)
+#
+# ac = a.intersection(b)
+# print(ac)
+#
+# ad = a.difference(b)
+# print(ad)
+
