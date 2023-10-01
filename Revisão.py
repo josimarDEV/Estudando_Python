@@ -1,6 +1,7 @@
 # print("hello world")  ctrl + / coloca comentario em todo o codigo celecionado
 import datetime
 
+
 # x = 10
 # nome = 'aluno'
 # nota = 8.75
@@ -823,7 +824,7 @@ import datetime
 #
 # print("\nDepois da listcomp = ", linguagem)
 
-#sem a list comprehension
+# sem a list comprehension
 
 # linguagens = '''Python Java JavaScript C C# C++ Swift Go Kotlin'''.split()
 # print(f"Antes da listcomp = {linguagens}")
@@ -874,7 +875,7 @@ import datetime
 # print(numeros_pares)
 
 
-#TUPLAS
+# TUPLAS
 # As tuplas também são estruturas de dados do grupo de objetos do tipo sequência.
 # A grande diferença entre listas e tuplas é que as primeiras são mutáveis, razão pela
 # qual, com elas, conseguimos fazer atribuições a posições específicas: por exemplo,
@@ -910,7 +911,7 @@ import datetime
 # print(vogais)
 
 
-#OBJETOS DO TIPO SET
+# OBJETOS DO TIPO SET
 # A tradução"conjunto" para set nos leva diretamente à essência desse tipo de
 # estrutura de dados em Python. Um objeto do tipo set habilita operações
 # matemáticas de conjuntos, tais como: união, intersecção, diferenteça, etc. Esse tipo
@@ -984,3 +985,125 @@ import datetime
 # ad = a.difference(b)
 # print(ad)
 
+
+# # #Dicionario
+# pessoa = {"guilherme": {"idade":28},
+#           "joao": {"idade":32},
+#           "maria": {"idade":15}}
+#
+# # pessoa["telefone"] = "28-999360636"
+# #
+# # print(pessoa)
+# #
+# # print(pessoa["nome"])
+# #
+# # pessoa["nome"] = "maria"
+# # print(pessoa["nome"])
+#
+# for x in pessoa:
+#     print(f"Seu nome é: \033[31m{x}\033[m e a sua idade é: \033[31m{pessoa[x]['idade']}\033[m")
+
+# #metodos
+# pessoas.clear() #limpa tudo no dicionario
+# pessoas.copy() #cria uma copia do dicionario
+# pessoas.fromkeys() #
+# pessoas.get() #uma forma de acessar um valor no dicionario
+# pessoas.items() #retorna uma lista de tuplas
+# pessoas.keys() #retorna todas as chave do dicionario
+# pessoas.pop() #remove e retorna o valor que ele removeu
+# pessoas.setdefault() #
+# pessoas.update() #atualiza um dicionario com outro dicionario
+# pessoas.values() #retorna os valor do dicionario
+# in pessoas # verifica se existir= uma chave no dicionario
+# del contatos #remove um valor chave no dicionario
+
+# print(pessoa.get("motor"))
+
+# #funcoes
+# def somar_valores(valores):
+#     return sum(valores)
+#
+# def antecessor_sucessor(numero):
+#     antecessor = numero - 1
+#     sucessor = numero + 1
+#     return antecessor, sucessor
+#
+#
+# print(somar_valores([10, 20, 32]))
+# print(antecessor_sucessor(10))
+#
+# def somar(a, b):
+#     return a + b
+#
+#
+# def exibir_resultado(a, b, funcao):
+#     resultado = funcao(a, b)
+#     print(f"O resultado da operação: {a} + {b} = {resultado}")
+#
+#
+# exibir_resultado(10, 5, somar)
+
+#Desafio 1
+# C = int(input("Digite quantas testes quer fazer: "))
+#
+# for i in range (C):
+#     N = int(input("Digite o poder a ser testado: "))
+#     if N <= 8000:
+#         print("Inseto!")
+#     else:
+#         print("Mais de 8000!")
+
+#Desafio 2
+# # Lê o número de casos de teste
+# T = int(input())
+#
+# # Processa cada caso de teste
+# for x in range(T):
+#     # Lê as variáveis de entrada N e K
+#     N, K = map(int, input().split())
+#
+#     calculo_de_garrafas = N // K + N % K
+#     # Imprime o resultado
+#     print(calculo_de_garrafas)
+
+
+# def divisao(a, b):
+#     return a // b
+#
+#
+# def resto_divisao(a, b):
+#     return a % b
+#
+#
+# print(divisao(7, 4))
+# print(resto_divisao(7, 4))
+# print('\n')
+# print(divisao(4, 7))
+# print(resto_divisao(4, 7))
+# print("\n")
+# print(divisao(4000, 7))
+# print(resto_divisao(4000, 7))
+
+# #desafio 3
+# a = input()
+# b = input()
+# c = input()
+#
+# if a == 'vertebrado' and b == 'ave' and c == 'carnivoro':
+#     print("aguia")
+# elif a == 'vertebrado' and b == 'ave' and c == 'onivoro':
+#     print("pomba")
+# elif a == 'vertebrado' and b == 'mamifero' and c == 'onivoro':
+#     print("homem")
+# elif a == 'vertebrado' and b == 'mamifero' and c == 'herbivoro':
+#     print("vaca")
+#
+#
+# elif a == 'invertebrado' and b == 'inseto' and c == 'hematofago':
+#     print("pulga")
+# elif a == 'invertebrado' and b == 'inseto' and c == 'herbivoro':
+#     print("lagarta")
+# elif a == 'invertebrado' and b == 'anelideo' and c == 'hematofago':
+#     print("sanguessuga")
+# elif a == 'invertebrado' and b == 'anelideo' and c == 'onivoro':
+#     print("minhoca")
