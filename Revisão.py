@@ -1107,3 +1107,45 @@ import datetime
 #     print("sanguessuga")
 # elif a == 'invertebrado' and b == 'anelideo' and c == 'onivoro':
 #     print("minhoca")
+
+# Passo 1: Defina uma lista vazia para armazenar os usuários
+lista_de_usuarios = []
+
+
+# Passo 2: Crie uma função para adicionar um novo usuário à lista
+def adicionar_usuario():
+    nome = input("Digite o nome: ")
+
+    # Verifique se o nome já existe na lista
+    for usuario in lista_de_usuarios:
+        if usuario['Nome'] == nome:
+            print("Este nome já existe na lista. Não será adicionado um novo usuário com o mesmo nome.")
+            return
+
+    sobrenome = input("Digite o sobrenome: ")
+    idade = int(input("Digite a idade: "))
+    email = input("Digite o email: ")
+
+    # Passo 4: Crie um dicionário com as informações do usuário e adicione-o à lista
+    usuario = {
+        'Nome': nome,
+        'Sobrenome': sobrenome,
+        'Idade': idade,
+        'Email': email
+    }
+    lista_de_usuarios.append(usuario)
+    print("Usuário adicionado com sucesso!")
+
+
+# Passo 5: Repita o processo conforme necessário (você pode criar um loop ou chamar a função manualmente)
+adicionar_usuario()
+adicionar_usuario()
+
+# Passo 6: Exiba os dados dos usuários cadastrados
+print("\nUsuários cadastrados:")
+for usuario in lista_de_usuarios:
+    print("Nome:", usuario['Nome'])
+    print("Sobrenome:", usuario['Sobrenome'])
+    print("Idade:", usuario['Idade'])
+    print("Email:", usuario['Email'])
+    print()
