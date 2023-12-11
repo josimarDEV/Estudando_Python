@@ -1,5 +1,5 @@
 import time
-
+# com def
 menu = int(input("""
 ======BANCO SILVA======
      [1]-CADASTRO
