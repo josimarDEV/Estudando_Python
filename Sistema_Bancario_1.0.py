@@ -3,6 +3,8 @@ from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
 
 
+# com classes e defs
+
 class Cliente:
     def __init__(self, endereco):
         self.endereco = endereco
